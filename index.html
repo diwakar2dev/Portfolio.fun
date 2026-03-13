@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diwakar Sharma | Developer Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h2 class="logo">Diwakar Sharma</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero with End particles -->
+<section id="home" class="hero">
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Diwakar Sharma</span></h1>
+      <h3 class="typing"><span id="typing-text"></span></h3>
+      <p>Building modern, powerful & scalable web applications with Ender-style energy.</p>
+      <a href="#projects" class="btn">View Projects</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/ender.png" alt="Ender Avatar">
+    </div>
+
+  </div>
+
+  <!-- End particles container -->
+  <div class="end-particles"></div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-container">
+
+    <div class="about-image">
+      <img src="images/ender.png" alt="Ender Avatar">
+    </div>
+
+    <div class="about-content">
+      <h3>Full Stack Developer</h3>
+
+      <p>
+        I'm <strong>Diwakar Sharma</strong>, a passionate full-stack developer who enjoys
+        building modern, scalable, and high-performance web applications.
+        I focus on clean code, smooth UI, and powerful backend logic.
+      </p>
+
+      <p>
+        With strong experience in both frontend and backend technologies,
+        I create responsive, user-friendly applications while constantly
+        learning and evolving with new tech trends.
+      </p>
+
+      <ul class="about-features">
+        <li>⚡ Clean Code</li>
+        <li>🧠 Problem Solving</li>
+        <li>🎨 Creative Design</li>
+        <li>🤝 Team Player</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <span>HTML</span>
+    <div class="bar"><div data-width="100%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>CSS</span>
+    <div class="bar"><div data-width="100%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>JavaScript</span>
+    <div class="bar"><div data-width="100%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Node.js</span>
+    <div class="bar"><div data-width="100%"></div></div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+
+  <div class="projects">
+    <!-- Project 1: Ender MC Site -->
+    <div class="card">
+      <h3>Ender MC Site</h3>
+      <p>A site of public Minecraft server created by me and my team.</p>
+      <a href="https://web.endermc.site/" target="_blank">Live Demo</a>
+    </div>
+
+    <!-- Project 2: Javix Node -->
+    <div class="card">
+      <h3>Javix Node</h3>
+      <p>A Minecraft hosting with high performance created by my team.</p>
+      <a href="https://dash.javixnode.fun/" target="_blank">Live Demo</a>
+    </div>
+
+    <!-- Project 3: Javix VPS -->
+    <div class="card">
+      <h3>Javix VPS</h3>
+      <p>
+        Here you can find cheapest price VPS plans and many things. <br>
+        Made by: <span class="highlight">Himanshu Gurjar (Founder), SK Mohsin (Founder), Ender (CEO)</span>
+      </p>
+      <a href="https://javixnode.fun/#" target="_blank">Live Demo</a>
+    </div>
+  </div>
+</section>
+<!-- As Developed Server Section -->
+<section id="developed-servers" class="section developed-servers">
+  <h2>As Developed Server</h2>
+
+  <div class="servers-container">
+    <div class="server-card">
+      <h3>Ender MC</h3>
+      <p>Own Minecraft public server, fully professional.</p>
+    </div>
+
+    <div class="server-card">
+      <h3>Epic MC</h3>
+      <p>Fully developed Minecraft server, created by me alone.</p>
+    </div>
+
+    <div class="server-card">
+      <h3>Etccc</h3>
+      <p>Various other projects and servers developed by me.</p>
+    </div>
+  </div>
+
+  <h3 class="big-highlight">Also, I am a MC and DC Dev</h3>
+</section>
+<!-- Contact -->
+<section id="contact" class="section">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 MrEnder. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// End particles effect
+const particlesContainer = document.querySelector(".end-particles");
+const numParticles = 30;
+
+for (let i = 0; i < numParticles; i++) {
+  const particle = document.createElement("div");
+  particle.classList.add("particle");
+
+  // Random initial position
+  particle.style.left = Math.random() * 100 + "%";
+  particle.style.top = Math.random() * 100 + "%";
+
+  // Random animation duration and delay
+  const duration = 4 + Math.random() * 4; // 4s - 8s
+  const delay = Math.random() * 5; // 0s - 5s
+  particle.style.animationDuration = duration + "s";
+  particle.style.animationDelay = delay + "s";
+
+  particlesContainer.appendChild(particle);
+}
+</script>
+</body>
+</html>
